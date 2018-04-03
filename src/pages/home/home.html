@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Program</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 align ="center">MOBILE APPLICATIONS DEVELOPMENT</h2>
+  <ion-slides auto-play="true" does-continue="true" slide-interval=2000>  
+    <ion-slide>  
+      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc1.jpg" /> </div>  
+    </ion-slide>  
+    <ion-slide>  
+      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc2.jpg" /></div>  
+    </ion-slide>  
+    <ion-slide on-slide-changed="slideHasChanged(index)">  
+      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc3.jpg" /></div>  
+    </ion-slide>  
+  </ion-slides>  
+  <ion-list>
+    <ion-list-header>Program Details</ion-list-header>
+    <ion-item *ngFor="let program of programs">
+      NAME: {{program.name}}</ion-item>
+      <ion-item *ngFor="let program of programs">
+      CODE: {{program.code}}</ion-item>
+      <ion-item *ngFor="let program of programs">
+      SCHOOL: {{program.school}}</ion-item>
+      <ion-item *ngFor="let program of programs">
+      LENGTH: {{program.length}}</ion-item>
+      <ion-item *ngFor="let program of programs">
+      DEADLINE: {{program.deadline}}
+    </ion-item>
+  </ion-list>
+</ion-content>
