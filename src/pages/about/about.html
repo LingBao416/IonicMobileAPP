@@ -1,11 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Courses
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>Courses Details</ion-list-header>
+    <ion-item *ngFor="let course of courses">
+      <h3>NAME: {{course.name}}</h3>
+      <p>      
+        <li>CODE: {{course.code}}</li>
+        <li>DESCRIPTION: {{course.desc}}</li>
+        <li>LENGTH: {{course.length}}</li>
+      </p>
 
+    </ion-item>
+  </ion-list>
 </ion-content>
