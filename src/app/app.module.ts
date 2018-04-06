@@ -6,9 +6,11 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { CommentPage } from '../pages/comment/comment';
+import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 //http request
-import {HttpModule} from '@angular/http'
+import { HttpModule} from '@angular/http'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProgramServiceProvider } from '../providers/program-service/program-service';
@@ -19,6 +21,8 @@ import { CourseServiceProvider } from '../providers/course-service/course-servic
     AboutPage,
     ContactPage,
     HomePage,
+    CommentPage,
+    LoginPage,
     TabsPage
   ],
   imports: [
@@ -33,6 +37,8 @@ import { CourseServiceProvider } from '../providers/course-service/course-servic
     AboutPage,
     ContactPage,
     HomePage,
+    CommentPage,
+    LoginPage,
     TabsPage
   ],
   providers: [
