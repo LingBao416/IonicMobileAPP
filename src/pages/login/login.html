@@ -10,7 +10,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
+  <ion-card>
     <ion-item>
       <ion-label fixed>Account</ion-label>
       <ion-input type="text" placeholder="Username" #username></ion-input>
@@ -19,15 +20,15 @@
       <ion-label fixed>Password</ion-label>
       <ion-input type="password" placeholder="Password" #password></ion-input>
     </ion-item>
-  <ion-item no-lines>
-    <label item-right>Remember Password</label>
-    <ion-toggle></ion-toggle>
-  </ion-item>
+
 
   <div style="text-align: center; margin-left: 30px; margin-right: 30px;">
     <button ion-button block color="danger" (click)="logIn(username, password)">
       Sign In
     </button>
   </div>
+  </ion-card>
 </ion-content>
+
+
 

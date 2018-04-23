@@ -14,22 +14,20 @@
 
 
 <ion-content padding>
-  <form>
-    
+    Login as：{{username}}
+  <form (ngSubmit)="saveComment()">
         <ion-item>
           <ion-label>Comment</ion-label>
-          <ion-textarea  name="description"></ion-textarea>
+          <ion-input type="text" [(ngModel)]="comments.comment" name="comment"></ion-input>
         </ion-item>
         <button ion-button type="submit" block>Add Comment</button>
       </form>
       <ion-list>
         <ion-list-header>Comments</ion-list-header>
         <ion-item *ngFor="let comment of comments">
-          <h3>NAME: {{course.name}}</h3>
+          <h3>NAME: {{comment.name}}</h3>
           <p>      
-            <li>CODE: {{course.code}}</li>
-            <li>DESCRIPTION: {{course.desc}}</li>
-            <li>LENGTH: {{course.length}}</li>
+            <li>COMMENT: {{comment.comment}}</li>
           </p>
         </ion-item>
       </ion-list>

@@ -1,22 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contactttttt
+      Teachers
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="img/nin-live.png"/>
+  <ion-list>
+  <ion-card *ngFor="let teacher of teachers">
+    <img src={{teacher.url}}>
     <ion-card-content>
       <ion-card-title>
-        Nine Inch Nails Live
+        NAME: {{teacher.name}}
         </ion-card-title>
       <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
+        DESCRIPTION:{{teacher.desc}}
       </p>
     </ion-card-content>
   </ion-card>
+  </ion-list>
 </ion-content>

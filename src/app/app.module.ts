@@ -15,6 +15,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProgramServiceProvider } from '../providers/program-service/program-service';
 import { CourseServiceProvider } from '../providers/course-service/course-service';
+import { TeacherServiceProvider } from '../providers/teacher-service/teacher-service';
+import { CommentServiceProvider } from '../providers/comment-service/comment-service';
 @NgModule({
   declarations: [
     MyApp,
@@ -46,7 +48,9 @@ import { CourseServiceProvider } from '../providers/course-service/course-servic
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProgramServiceProvider,
-    CourseServiceProvider
+    CourseServiceProvider,
+    TeacherServiceProvider,
+    CommentServiceProvider
   ]
 })
 export class AppModule {}

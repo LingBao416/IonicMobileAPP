@@ -4,32 +4,35 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class = "content">
   <h2 align ="center">MOBILE APPLICATIONS DEVELOPMENT</h2>
-  <ion-slides auto-play="true" does-continue="true" slide-interval=2000>  
-    <ion-slide>  
-      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc1.jpg" /> </div>  
-    </ion-slide>  
-    <ion-slide>  
-      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc2.jpg" /></div>  
-    </ion-slide>  
-    <ion-slide on-slide-changed="slideHasChanged(index)">  
-      <div class="box banner"><img src="/Users/baoling/ionic/myApp/src/assets/imgs/cc3.jpg" /></div>  
-    </ion-slide>  
-  </ion-slides>  
-  <ion-list>
-    <ion-list-header>Program Details</ion-list-header>
-    <ion-item *ngFor="let program of programs">
-      NAME: {{program.name}}</ion-item>
-      <ion-item *ngFor="let program of programs">
-      CODE: {{program.code}}</ion-item>
-      <ion-item *ngFor="let program of programs">
-      SCHOOL: {{program.school}}</ion-item>
-      <ion-item *ngFor="let program of programs">
-      LENGTH: {{program.length}}</ion-item>
-      <ion-item *ngFor="let program of programs">
-      DEADLINE: {{program.deadline}}
+  <div>
+  <iframe  class="video" src="https://player.vimeo.com/video/254513735?background=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+  <ion-list class = "content">
+    <h2>Program Details</h2>
+    <ul>
+    <ion-item class = "item" *ngFor="let program of programs">
+      <li>Name: {{program.name}}</li>
+
+      <li>Code: {{program.code}}</li>
+
+      <li>School: {{program.school}}</li>
+
+      <li>Length: {{program.length}}</li>
+
+      <li>Deadline: {{program.deadline}}</li>
     </ion-item>
+    </ul>
   </ion-list>
 
+  <h2>Program Overview</h2>
+  <p>Centennial College's Mobile Applications Development program ensures you develop the necessary skills to enter the fast-growing mobile software applications ("apps") development market.
+  </p>
+  <p>
+      In this graduate certificate program's Mobile Application Development courses, you learn to develop mobile apps for Google Android and Apple iOS devices. In addition to core fundamental courses, the offering covers advanced topics in mobile app development, web and enterprise technologies, user interface (UI), user experience (UX), emerging technologies and more.
+  </p>
+  <p>
+      The knowledge you gain in this college technology program applied in a capstone project to develop mobile apps for business, gaming, health care, social networks, the internet of things and other areas of interest to which your imaginations takes you.</p>
 </ion-content>

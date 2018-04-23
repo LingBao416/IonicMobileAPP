@@ -11,21 +11,17 @@ import 'rxjs/add/operator/catch';
   and Angular DI.
 */
 @Injectable()
-export class CourseServiceProvider {
+export class TeacherServiceProvider {
 
   constructor(private http: Http) {
-    console.log('Hello CourseServiceProvider Provider');
+    console.log('Hello TeacherServiceProvider Provider');
   }
-  getCourses(){
-    return this.http.get('http://localhost:8080/api/courses')
+  getTeachers(){
+    return this.http.get('http://localhost:8080/api/teachers')
     .do(this.logResponse)
     .map(this.extractData)
   }
-  getLessons(){
-    return this.http.get('http://localhost:8080/api/lessons')
-    .do(this.logResponse)
-    .map(this.extractData)
-  }
+
   
   
 

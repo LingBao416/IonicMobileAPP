@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-list-header>Courses Details</ion-list-header>
+    <h1>Courses Details</h1>
     <ion-item *ngFor="let course of courses">
       <h3>NAME: {{course.name}}</h3>
       <p>      
@@ -19,4 +19,17 @@
 
     </ion-item>
   </ion-list>
+  <ion-list>
+      <h1>Courses Details</h1>
+    <ion-item *ngFor="let lesson of lessons">
+        <h3>NAME: {{lesson.name}}</h3>
+        <p>      
+          <li>CODE: {{lesson.code}}</li>
+          <li>DESCRIPTION: {{lesson.desc}}</li>
+          <li>LENGTH: {{lesson.length}}</li>
+        </p>
+      </ion-item>
+  </ion-list>
+
+
 </ion-content>

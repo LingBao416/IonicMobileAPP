@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { CommentServiceProvider } from '../../providers/comment-service/comment-service';
 /**
  * Generated class for the CommentPage page.
  *
@@ -13,12 +13,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'comment.html',
 })
 export class CommentPage {
-
-  constructor(public navCtrl: NavController) {
+  comments = [];
+  public username:string;
+  constructor(public navCtrl: NavController,private commentService:CommentServiceProvider) {
+    this.getComments();
+    this.username= window.localStorage.getItem('username');
+  }
+  getComments(){
+    this.commentService.getComments().subscribe(data =>this.comments = data);
+  }
+  saveComment(){
+    this.commentService.saveComments(this.comments)
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CommentPage');
-  }
 
 }
