@@ -11,6 +11,7 @@ programs = [];
 
   constructor(public navCtrl: NavController, private programService:ProgramServiceProvider) {
    this.getPrograms();
+   console.log(window.localStorage.getItem('username'))
   }
 
   getPrograms(){

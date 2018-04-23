@@ -12,12 +12,12 @@ export class MyApp {
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    // if(window.localStorage.getItem('username')) {
-    //   this.rootPage = TabsPage;
-    // } else {
-    //   this.rootPage = LoginPage;
-    // }
-    this.rootPage = LoginPage;
+    if(window.localStorage.getItem('username')) {
+      this.rootPage = TabsPage;
+    } else {
+      this.rootPage = LoginPage;
+    }
+    // this.rootPage = LoginPage;
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

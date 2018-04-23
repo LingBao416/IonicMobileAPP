@@ -8,26 +8,26 @@
 
 <ion-content padding>
   <ion-list>
-    <h1>Courses Details</h1>
+    <h2>First Semester</h2>
     <ion-item *ngFor="let course of courses">
-      <h3>NAME: {{course.name}}</h3>
+      <h3>Name: {{course.name}}</h3>
       <p>      
-        <li>CODE: {{course.code}}</li>
-        <li>DESCRIPTION: {{course.desc}}</li>
-        <li>LENGTH: {{course.length}}</li>
+        <li class = "p1">Code: {{course.code}}</li>
+        <li class = "p1" >Description: {{course.desc}}</li>
+        <li class = "p1">Length: {{course.length}}</li>
       </p>
 
     </ion-item>
   </ion-list>
   <ion-list>
-      <h1>Courses Details</h1>
+      <h2>Second Semester</h2>
     <ion-item *ngFor="let lesson of lessons">
-        <h3>NAME: {{lesson.name}}</h3>
-        <p>      
-          <li>CODE: {{lesson.code}}</li>
-          <li>DESCRIPTION: {{lesson.desc}}</li>
-          <li>LENGTH: {{lesson.length}}</li>
-        </p>
+        <h3>Name: {{lesson.name}}</h3>
+              
+          <p  class = "p1">Code: {{lesson.code}}</p>
+          <p  class = "p1">Description: {{lesson.desc}}</p>
+          <p  class = "p1">Length: {{lesson.length}}</p>
+        
       </ion-item>
   </ion-list>
 

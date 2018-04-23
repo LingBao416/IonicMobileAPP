@@ -17,6 +17,7 @@ import { ProgramServiceProvider } from '../providers/program-service/program-ser
 import { CourseServiceProvider } from '../providers/course-service/course-service';
 import { TeacherServiceProvider } from '../providers/teacher-service/teacher-service';
 import { CommentServiceProvider } from '../providers/comment-service/comment-service';
+import { Data } from '../providers/data/data';
 @NgModule({
   declarations: [
     MyApp,
@@ -50,7 +51,8 @@ import { CommentServiceProvider } from '../providers/comment-service/comment-ser
     ProgramServiceProvider,
     CourseServiceProvider,
     TeacherServiceProvider,
-    CommentServiceProvider
+    CommentServiceProvider,
+    Data
   ]
 })
 export class AppModule {}

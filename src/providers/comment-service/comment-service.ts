@@ -12,7 +12,6 @@ import 'rxjs/add/operator/catch';
 */
 @Injectable()
 export class CommentServiceProvider {
-
   constructor(private http: Http) {
     console.log('Hello CommentServiceProvider Provider');
   }
@@ -30,9 +29,11 @@ export class CommentServiceProvider {
     let options  = new RequestOptions({
       headers: header
     })
+    console.log(data);
     return this.http.post('http://localhost:8080/api/comments',JSON.stringify(data),options)
     
   }
+
 
   private logResponse(res: Response){
     console.log(res);

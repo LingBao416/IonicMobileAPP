@@ -17,7 +17,8 @@ export class CommentPage {
   public username:string;
   constructor(public navCtrl: NavController,private commentService:CommentServiceProvider) {
     this.getComments();
-    this.username= window.localStorage.getItem('username');
+    this.username =window.localStorage.getItem('username');
+    console.log(window.localStorage.getItem('username'))
   }
   getComments(){
     this.commentService.getComments().subscribe(data =>this.comments = data);

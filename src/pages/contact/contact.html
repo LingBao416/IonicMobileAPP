@@ -7,15 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+  <ion-list >
   <ion-card *ngFor="let teacher of teachers">
-    <img src={{teacher.url}}>
-    <ion-card-content>
+    <img class="img"src={{teacher.url}}>
+    <ion-card-content class="c1">
       <ion-card-title>
-        NAME: {{teacher.name}}
+        {{teacher.name}}
         </ion-card-title>
       <p>
-        DESCRIPTION:{{teacher.desc}}
+        {{teacher.course}}</p>
+      <p>
+        {{teacher.desc}}
       </p>
     </ion-card-content>
   </ion-card>
