@@ -15,12 +15,12 @@
 
 <ion-content padding>
     Login as：{{username}}
-  <form (ngSubmit)="saveComment()">
+  <form>
         <ion-item>
           <ion-label>Comment</ion-label>
-          <ion-input type="text" [(ngModel)]="comments.comment" name="comment"></ion-input>
+          <ion-input type="text" [(ngModel)]="comment" name="comment"></ion-input>
         </ion-item>
-        <button ion-button type="submit" block>Add Comment</button>
+        <button ion-button full (click)="saveComments(name,comment)">Add Comment</button>
       </form>
       <ion-list>
         <ion-list-header>Comments</ion-list-header>

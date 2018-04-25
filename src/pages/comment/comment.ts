@@ -23,8 +23,13 @@ export class CommentPage {
   getComments(){
     this.commentService.getComments().subscribe(data =>this.comments = data);
   }
-  saveComment(){
-    this.commentService.saveComments(this.comments)
+  saveComments(name, comment){
+    this.navCtrl.setRoot(CommentPage);
+    let p = this.commentService.saveComments(window.localStorage.getItem('username'),comment);
+    p.then(data =>{
+      console.log(JSON.stringify(data.json()))
+    })
+    this.navCtrl.setRoot(CommentPage);
   }
 
 

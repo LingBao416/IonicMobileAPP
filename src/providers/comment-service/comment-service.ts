@@ -20,18 +20,16 @@ export class CommentServiceProvider {
     .do(this.logResponse)
     .map(this.extractData)
   }
-  saveComments(data){
-    let header = new Headers({
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Accept' : 'application/json'
-  }
-);
-    let options  = new RequestOptions({
-      headers: header
-    })
-    console.log(data);
-    return this.http.post('http://localhost:8080/api/comments',JSON.stringify(data),options)
-    
+  saveComments(name, comment): Promise<any>{
+
+    console.log("name = "+name +"comments ="+comment);
+    let param = {
+      name:300901785,
+      comment:comment
+    };
+    let url = "http://localhost:8080/api/comments";
+    let request = this.http.post(url,param);
+    return request.toPromise();
   }
 
 
